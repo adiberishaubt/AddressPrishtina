@@ -10,6 +10,5 @@ public interface IAddressService
     Task<Address> Get(int id, CancellationToken cancellationToken);
     Task Update(int id, AddressRequest updatedAddress, string userId, CancellationToken cancellationToken);
     Task Delete(int id, string userId, CancellationToken cancellationToken);
-    Task<List<Address>> Search(string searchItem, CancellationToken cancellationToken);
     Task ApproveAddress(int id, CancellationToken cancellationToken);
 }

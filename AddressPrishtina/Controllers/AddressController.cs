@@ -88,10 +88,4 @@ public class AddressController : ControllerBase
         await _addressService.Delete(id, User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Sid).Value, cancellationToken);
         return Ok();
     }
-
-    [HttpGet("searchItem")]
-    public async Task<ActionResult<List<Address>>> Search(string searchItem, CancellationToken cancellationToken)
-    {
-        return await _addressService.Search(searchItem, cancellationToken);
-    }
 }

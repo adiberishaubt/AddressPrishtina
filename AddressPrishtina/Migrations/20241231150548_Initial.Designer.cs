@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AddressPrishtina.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20241230223135_Initial")]
+    [Migration("20241231150548_Initial")]
     partial class Initial
     {
         /// <inheritdoc />

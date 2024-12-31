@@ -117,12 +117,6 @@ public class AddressService : IAddressService
             throw new Exception("Address doesn't exist!");
         }
     }
-
-    public async Task<List<Address>> Search(string searchItem, CancellationToken cancellationToken)
-    {
-        return await _dataContext.Addresses.Where(a => a.Rruga.ToLower().Contains(searchItem)).ToListAsync(cancellationToken);
-    }
-
     public async Task ApproveAddress(int id, CancellationToken cancellationToken)
     {
         var address = await _dataContext.Addresses.FirstOrDefaultAsync(a => a.Id == id, cancellationToken);
